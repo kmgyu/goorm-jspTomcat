@@ -30,7 +30,7 @@ public class BoardDAO {
     return jdbcTemplate.query(sql, boardRowMapper);
   }
 
-  public Board getBoardById(int id) {
+  public Board getBoardById(long id) {
     String sql = "SELECT * FROM board WHERE id = ?";
     try {
       return jdbcTemplate.queryForObject(sql, boardRowMapper, id);
@@ -58,7 +58,7 @@ public class BoardDAO {
   }
 
   // 게시글 삭제 메서드도 추가
-  public boolean deleteBoard(int id) {
+  public boolean deleteBoard(long id) {
     String sql = "DELETE FROM board WHERE id = ?";
     int result = jdbcTemplate.update(sql, id);
     return result > 0;

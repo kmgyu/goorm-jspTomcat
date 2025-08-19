@@ -38,6 +38,8 @@
 
     <p>
         <a href="front?command=boardWrite">글쓰기</a>
+        <a href="front?command=boardUpdate&id=${board.id}">수정</a>
+        <a href="front?command=boardDelete&id=${board.id}">삭제</a>
         <a href="front?command=boardList">목록</a>
     </p>
 </c:if>
