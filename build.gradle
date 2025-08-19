@@ -18,7 +18,7 @@ dependencies {
     implementation 'org.springframework:spring-tx:5.3.20'
 
     // Database
-    implementation 'com.h2database:h2:2.1.214'
+    implementation 'com.h2database:h2:2.3.232'
 
     // Servlet & JSP - provided scope 사용 (Tomcat에서 제공)
     providedCompile 'javax.servlet:javax.servlet-api:4.0.1'

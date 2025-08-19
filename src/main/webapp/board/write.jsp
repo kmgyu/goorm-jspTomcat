@@ -18,7 +18,7 @@
     </p>
     <p>
         <label>작성자:</label>
-        <input type="text" name="writer" value="${writer}" required>
+        <input type="text" name="author" value="${author}" required>
     </p>
     <p>
         <label>내용:</label>

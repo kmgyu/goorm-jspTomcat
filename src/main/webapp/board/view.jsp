@@ -24,11 +24,11 @@
         </tr>
         <tr>
             <th>작성자</th>
-            <td>${board.writer}</td>
+            <td>${board.author}</td>
         </tr>
         <tr>
             <th>작성일</th>
-            <td>${board.regDate}</td>
+            <td>${board.createdAt}</td>
         </tr>
         <tr>
             <th>내용</th>

@@ -21,7 +21,7 @@ public class BoardDAO {
     board.setTitle(rs.getString("title"));
     board.setAuthor(rs.getString("author"));
     board.setContent(rs.getString("content"));
-    board.setCreatedAt(rs.getTimestamp("createdAt"));
+    board.setCreatedAt(rs.getTimestamp("created_at"));
     return board;
   };
 
@@ -40,7 +40,7 @@ public class BoardDAO {
   }
 
   public void insertBoard(Board board) {
-    String sql = "INSERT INTO board (title, writer, content, reg_date) VALUES (?, ?, ?, NOW())";
+    String sql = "INSERT INTO board (title, author, content, created_at) VALUES (?, ?, ?, NOW())";
     jdbcTemplate.update(sql, board.getTitle(), board.getAuthor(), board.getContent());
   }
 

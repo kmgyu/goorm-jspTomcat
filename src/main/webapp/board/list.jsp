@@ -24,8 +24,8 @@
         <tr>
             <td>${board.id}</td>
             <td><a href="front?command=boardView&id=${board.id}">${board.title}</a></td>
-            <td>${board.writer}</td>
-            <td>${board.regDate}</td>
+            <td>${board.author}</td>
+            <td>${board.createdAt}</td>
         </tr>
     </c:forEach>
 </table>
