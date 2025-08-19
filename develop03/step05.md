@@ -176,7 +176,7 @@ document.querySelector('form').addEventListener('submit', function(e) {
 #### ImageUploadCommand.java 생성
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -246,8 +246,8 @@ public class ImageUploadCommand implements Command {
 
         String imageUrl = request.getContextPath() + "/" + filePath;
         String jsonResponse = String.format(
-            "{\"url\":\"%s\",\"uploaded\":true,\"fileName\":\"%s\"}",
-            imageUrl, fileName
+                "{\"url\":\"%s\",\"uploaded\":true,\"fileName\":\"%s\"}",
+                imageUrl, fileName
         );
 
         response.getWriter().write(jsonResponse);

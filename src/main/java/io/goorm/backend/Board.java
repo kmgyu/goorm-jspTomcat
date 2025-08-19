@@ -1,4 +1,4 @@
-package io.goorm.backend;
+package main.java.io.goorm.backend;
 
 import java.sql.Timestamp;
 

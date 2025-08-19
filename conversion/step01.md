@@ -55,7 +55,7 @@
 `src/io/goorm/backend/command/` 폴더를 생성하고 `Command.java` 인터페이스를 만듭니다.
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -80,10 +80,10 @@ request.setAttribute("boardList", boardList);
 **변환된 BoardListCommand**:
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.BoardDAO;
-import io.goorm.backend.Board;
+import main.java.io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.Board;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -144,9 +144,9 @@ public class BoardListCommand implements Command {
 `src/io/goorm/backend/handler/` 폴더를 생성하고 `HandlerMapping.java`를 만듭니다.
 
 ```java
-package io.goorm.backend.handler;
+package main.java.io.goorm.backend.handler;
 
-import io.goorm.backend.command.*;
+import main.java.io.goorm.backend.command.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -174,10 +174,10 @@ public class HandlerMapping {
 `src/io/goorm/backend/controller/` 폴더에 `FrontController.java`를 생성합니다.
 
 ```java
-package io.goorm.backend.controller;
+package main.java.io.goorm.backend.controller;
 
-import io.goorm.backend.handler.HandlerMapping;
-import io.goorm.backend.command.Command;
+import main.java.io.goorm.backend.handler.HandlerMapping;
+import main.java.io.goorm.backend.command.Command;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -458,7 +458,7 @@ public class FrontController extends HttpServlet {
 ### 과제 1: BoardWriteCommand.java
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -476,10 +476,10 @@ public class BoardWriteCommand implements Command {
 ### 과제 2: BoardInsertCommand.java
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.Board;
-import io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.Board;
+import main.java.io.goorm.backend.BoardDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -527,10 +527,10 @@ public class BoardInsertCommand implements Command {
 ### 과제 3: BoardViewCommand.java
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.Board;
-import io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.Board;
+import main.java.io.goorm.backend.BoardDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

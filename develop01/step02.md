@@ -77,10 +77,10 @@ public User getUserById(int userId) {
 `src/main/java/io/goorm/backend/command/LoginCommand.java` 생성:
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.User;
-import io.goorm.backend.UserDAO;
+import main.java.io.goorm.backend.User;
+import main.java.io.goorm.backend.UserDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -104,7 +104,7 @@ public class LoginCommand implements Command {
 
                 // 유효성 검사
                 if (username == null || username.trim().isEmpty() ||
-                    password == null || password.trim().isEmpty()) {
+                        password == null || password.trim().isEmpty()) {
                     request.setAttribute("error", "아이디와 비밀번호를 모두 입력해주세요.");
                     return "/user/login.jsp";
                 }
@@ -162,7 +162,7 @@ public class LoginCommand implements Command {
 `src/main/java/io/goorm/backend/command/LogoutCommand.java` 생성:
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

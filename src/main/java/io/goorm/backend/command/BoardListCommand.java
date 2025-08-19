@@ -1,7 +1,7 @@
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.BoardDAO;
-import io.goorm.backend.Board;
+import main.java.io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.Board;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

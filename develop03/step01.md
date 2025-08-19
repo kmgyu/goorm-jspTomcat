@@ -39,7 +39,7 @@
 #### Pagination.java 생성
 
 ```java
-package io.goorm.backend.model;
+package main.java.io.goorm.backend.model;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -108,15 +108,41 @@ public class Pagination {
     }
 
     // Getter 메서드들
-    public int getCurrentPage() { return currentPage; }
-    public int getPageSize() { return pageSize; }
-    public int getTotalCount() { return totalCount; }
-    public int getTotalPages() { return totalPages; }
-    public int getStartPage() { return startPage; }
-    public int getEndPage() { return endPage; }
-    public boolean isHasPrevious() { return hasPrevious; }
-    public boolean isHasNext() { return hasNext; }
-    public List<Integer> getPageNumbers() { return pageNumbers; }
+    public int getCurrentPage() {
+        return currentPage;
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public int getTotalCount() {
+        return totalCount;
+    }
+
+    public int getTotalPages() {
+        return totalPages;
+    }
+
+    public int getStartPage() {
+        return startPage;
+    }
+
+    public int getEndPage() {
+        return endPage;
+    }
+
+    public boolean isHasPrevious() {
+        return hasPrevious;
+    }
+
+    public boolean isHasNext() {
+        return hasNext;
+    }
+
+    public List<Integer> getPageNumbers() {
+        return pageNumbers;
+    }
 
     /**
      * 이전 페이지 번호 반환

@@ -139,7 +139,7 @@ plugins {
     id 'war'
 }
 
-group = 'io.goorm.backend'
+group = 'main.java.io.goorm.backend'
 version = '1.0-SNAPSHOT'
 
 repositories {

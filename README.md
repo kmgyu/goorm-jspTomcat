@@ -103,11 +103,11 @@
 <!-- web.xml에서 서블릿 매핑 -->
 <servlet>
     <servlet-name>BoardWriteServlet</servlet-name>
-    <servlet-class>io.goorm.backend.controller.BoardWriteServlet</servlet-class>
+    <servlet-class>main.java.io.goorm.backend.controller.BoardWriteServlet</servlet-class>
 </servlet>
 <servlet-mapping>
-    <servlet-name>BoardWriteServlet</servlet-name>
-    <url-pattern>/board/write</url-pattern>
+<servlet-name>BoardWriteServlet</servlet-name>
+<url-pattern>/board/write</url-pattern>
 </servlet-mapping>
 ```
 

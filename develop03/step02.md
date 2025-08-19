@@ -47,7 +47,7 @@
 #### ThumbnailGenerator.java 생성
 
 ```java
-package io.goorm.backend.util;
+package main.java.io.goorm.backend.util;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -86,9 +86,9 @@ public class ThumbnailGenerator {
 
             // 썸네일 크기 계산 (비율 유지)
             Dimension thumbnailSize = calculateThumbnailSize(
-                sourceImage.getWidth(),
-                sourceImage.getHeight(),
-                maxSize
+                    sourceImage.getWidth(),
+                    sourceImage.getHeight(),
+                    maxSize
             );
 
             // 썸네일 이미지 생성
@@ -108,8 +108,8 @@ public class ThumbnailGenerator {
      */
     private static Dimension calculateThumbnailSize(int originalWidth, int originalHeight, int maxSize) {
         double ratio = Math.min(
-            (double) maxSize / originalWidth,
-            (double) maxSize / originalHeight
+                (double) maxSize / originalWidth,
+                (double) maxSize / originalHeight
         );
 
         int newWidth = (int) (originalWidth * ratio);
@@ -124,9 +124,9 @@ public class ThumbnailGenerator {
     private static BufferedImage createThumbnail(BufferedImage source, Dimension size) {
         // 썸네일용 BufferedImage 생성
         BufferedImage thumbnail = new BufferedImage(
-            size.width,
-            size.height,
-            BufferedImage.TYPE_INT_RGB
+                size.width,
+                size.height,
+                BufferedImage.TYPE_INT_RGB
         );
 
         // Graphics2D 객체 생성 및 설정

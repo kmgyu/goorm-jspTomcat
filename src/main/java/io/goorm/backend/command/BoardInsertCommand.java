@@ -1,7 +1,7 @@
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.Board;
-import io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.Board;
+import main.java.io.goorm.backend.BoardDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,7 +28,7 @@ public class BoardInsertCommand implements Command {
 
             Board board = new Board();
             board.setTitle(title);
-            board.setWriter(writer);
+            board.setAuthor(writer);
             board.setContent(content);
 
             BoardDAO dao = new BoardDAO();

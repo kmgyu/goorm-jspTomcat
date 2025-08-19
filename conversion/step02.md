@@ -70,9 +70,10 @@
 `src/io/goorm/backend/config/DatabaseConfig.java` 생성:
 
 ```java
-package io.goorm.backend.config;
+package main.java.io.goorm.backend.config;
 
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
 import javax.sql.DataSource;
 
 public class DatabaseConfig {
@@ -93,11 +94,11 @@ public class DatabaseConfig {
 기존 `BoardDAO.java`를 다음과 같이 수정:
 
 ```java
-package io.goorm.backend;
+package main.java.io.goorm.backend;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import io.goorm.backend.config.DatabaseConfig;
+import main.java.io.goorm.backend.config.DatabaseConfig;
 
 import java.util.List;
 
@@ -210,10 +211,10 @@ public class BoardDAO {
 ### 과제 1 정답: BoardUpdateCommand.java
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.Board;
-import io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.Board;
+import main.java.io.goorm.backend.BoardDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -284,9 +285,9 @@ public class BoardUpdateCommand implements Command {
 ### 과제 2 정답: BoardDeleteCommand.java
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.BoardDAO;
+import main.java.io.goorm.backend.BoardDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

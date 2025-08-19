@@ -63,7 +63,7 @@ Java IO 스트림을 활용하여 대용량 파일을 청크 단위로 효율적
 #### ChunkUploadHandler.java 생성
 
 ```java
-package io.goorm.backend.service;
+package main.java.io.goorm.backend.service;
 
 import java.io.*;
 import java.nio.file.*;
@@ -215,14 +215,14 @@ public class ChunkUploadHandler {
             if (Files.exists(tempDir)) {
                 // Files.walk로 디렉토리 순회 실습
                 Files.walk(tempDir)
-                     .sorted((a, b) -> b.compareTo(a)) // 하위 파일부터 삭제
-                     .forEach(path -> {
-                         try {
-                             Files.deleteIfExists(path);
-                         } catch (IOException e) {
-                             e.printStackTrace();
-                         }
-                     });
+                        .sorted((a, b) -> b.compareTo(a)) // 하위 파일부터 삭제
+                        .forEach(path -> {
+                            try {
+                                Files.deleteIfExists(path);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        });
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -245,9 +245,10 @@ public class ChunkUploadHandler {
 #### ChunkUploadCommand.java 생성
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.service.ChunkUploadHandler;
+import main.java.io.goorm.backend.service.ChunkUploadHandler;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -356,9 +357,9 @@ public class ChunkUploadCommand implements Command {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.getWriter().write(String.format(
-            "{\"progress\":%.2f,\"percentage\":%d}",
-            progress,
-            (int)(progress * 100)
+                "{\"progress\":%.2f,\"percentage\":%d}",
+                progress,
+                (int) (progress * 100)
         ));
 
         return null;

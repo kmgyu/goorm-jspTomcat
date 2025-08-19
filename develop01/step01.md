@@ -67,7 +67,7 @@ VALUES ('admin', 'admin123', '관리자', 'admin@test.com');
 `src/main/java/io/goorm/backend/User.java` 생성:
 
 ```java
-package io.goorm.backend;
+package main.java.io.goorm.backend;
 
 import java.sql.Timestamp;
 
@@ -89,11 +89,11 @@ public class User {
 `src/main/java/io/goorm/backend/UserDAO.java` 생성:
 
 ```java
-package io.goorm.backend;
+package main.java.io.goorm.backend;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import io.goorm.backend.config.DatabaseConfig;
+import main.java.io.goorm.backend.config.DatabaseConfig;
 
 public class UserDAO {
     private JdbcTemplate jdbcTemplate;
@@ -107,10 +107,10 @@ public class UserDAO {
         String sql = "INSERT INTO user (username, password, name, email) VALUES (?, ?, ?, ?)";
         try {
             int result = jdbcTemplate.update(sql,
-                user.getUsername(),
-                user.getPassword(),
-                user.getName(),
-                user.getEmail());
+                    user.getUsername(),
+                    user.getPassword(),
+                    user.getName(),
+                    user.getEmail());
             return result > 0;
         } catch (Exception e) {
             return false;
@@ -146,10 +146,10 @@ public class UserDAO {
 `src/main/java/io/goorm/backend/command/SignupCommand.java` 생성:
 
 ```java
-package io.goorm.backend.command;
+package main.java.io.goorm.backend.command;
 
-import io.goorm.backend.User;
-import io.goorm.backend.UserDAO;
+import main.java.io.goorm.backend.User;
+import main.java.io.goorm.backend.UserDAO;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -174,8 +174,8 @@ public class SignupCommand implements Command {
 
                 // 유효성 검사
                 if (username == null || username.trim().isEmpty() ||
-                    password == null || password.trim().isEmpty() ||
-                    name == null || name.trim().isEmpty()) {
+                        password == null || password.trim().isEmpty() ||
+                        name == null || name.trim().isEmpty()) {
                     request.setAttribute("error", "필수 필드를 모두 입력해주세요.");
                     return "/user/signup.jsp";
                 }
