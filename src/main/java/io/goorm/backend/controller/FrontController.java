@@ -1,7 +1,7 @@
-package main.java.io.goorm.backend.controller;
+package io.goorm.backend.controller;
 
-import main.java.io.goorm.backend.handler.HandlerMapping;
-import main.java.io.goorm.backend.command.Command;
+import io.goorm.backend.handler.HandlerMapping;
+import io.goorm.backend.command.Command;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

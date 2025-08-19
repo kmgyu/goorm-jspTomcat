@@ -1,4 +1,4 @@
-package main.java.io.goorm.backend.command;
+package io.goorm.backend.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

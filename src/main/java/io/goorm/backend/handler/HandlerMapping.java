@@ -1,6 +1,6 @@
-package main.java.io.goorm.backend.handler;
+package io.goorm.backend.handler;
 
-import main.java.io.goorm.backend.command.*;
+import io.goorm.backend.command.*;
 
 import java.util.HashMap;
 import java.util.Map;

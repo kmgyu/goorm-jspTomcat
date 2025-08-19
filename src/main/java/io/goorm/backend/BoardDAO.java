@@ -1,8 +1,8 @@
-package main.java.io.goorm.backend;
+package io.goorm.backend;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import main.java.io.goorm.backend.config.DatabaseConfig;
+import io.goorm.backend.config.DatabaseConfig;
 
 import java.util.List;
 

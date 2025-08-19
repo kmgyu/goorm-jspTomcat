@@ -1,4 +1,4 @@
-package main.java.io.goorm.backend.config;
+package io.goorm.backend.config;
 
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
