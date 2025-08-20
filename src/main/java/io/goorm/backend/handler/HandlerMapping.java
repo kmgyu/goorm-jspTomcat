@@ -13,7 +13,6 @@ public class HandlerMapping {
         commandMap = new HashMap<>();
         commandMap.put("boardList", new BoardListCommand());
         commandMap.put("boardWrite", new BoardWriteCommand());
-        commandMap.put("boardInsert", new BoardInsertCommand());
         commandMap.put("boardView", new BoardViewCommand());
         commandMap.put("boardDelete", new BoardDeleteCommand());
         commandMap.put("boardUpdate", new BoardUpdateCommand());

@@ -11,7 +11,7 @@
     <p style="color: red;">${error}</p>
 </c:if>
 
-<form action="front?command=boardInsert" method="post">
+<form action="front?command=boardWrite" method="post">
     <p>
         <label>제목:</label>
         <input type="text" name="title" value="${title}" required>
