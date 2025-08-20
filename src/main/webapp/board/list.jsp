@@ -11,6 +11,19 @@
     <p style="color: red;">${error}</p>
 </c:if>
 
+<div style="text-align: right; margin: 10px;">
+    <c:choose>
+        <c:when test="${not empty sessionScope.user}">
+            안녕하세요, ${sessionScope.userName}님!
+            <a href="front?command=logout">로그아웃</a>
+        </c:when>
+        <c:otherwise>
+            <a href="front?command=login">로그인</a> |
+            <a href="front?command=signup">회원가입</a>
+        </c:otherwise>
+    </c:choose>
+</div>
+
 <a href="front?command=boardWrite">글쓰기</a>
 
 <table border="1">
