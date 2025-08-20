@@ -17,10 +17,6 @@
         <input type="text" name="title" value="${title}" required>
     </p>
     <p>
-        <label>작성자:</label>
-        <input type="text" name="author" value="${author}" required>
-    </p>
-    <p>
         <label>내용:</label>
         <textarea name="content" rows="5" cols="50">${content}</textarea>
     </p>
