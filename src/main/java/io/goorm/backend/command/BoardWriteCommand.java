@@ -2,6 +2,7 @@ package io.goorm.backend.command;
 
 import io.goorm.backend.Board;
 import io.goorm.backend.BoardDAO;
+import io.goorm.backend.User;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -46,6 +47,12 @@ public class BoardWriteCommand implements Command {
                 board.setTitle(title);
                 board.setContent(content);
                 board.setWriterId((Integer) session.getAttribute("userId"));
+
+                // 상남자처럼 user 객체를 세션에 저장해놓고 있음.
+                // 그래서 여기서도 setter로 username 가져와야 함.
+
+                User currentUser = (User) session.getAttribute("user");
+                board.setAuthor(currentUser.getUsername());
                 board.setCreatedAt(new Timestamp(System.currentTimeMillis()));
 
                 BoardDAO boardDAO = new BoardDAO();
