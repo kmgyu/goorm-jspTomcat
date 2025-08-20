@@ -28,6 +28,11 @@ public class UserDAO {
         }
     }
 
+    // Todo: update User implements
+    public boolean updateUser(User user) {
+
+    }
+
     // 사용자명으로 사용자 조회 (중복 확인용)
     public User getUserByUsername(String username) {
         String sql = "SELECT * FROM users WHERE username = ?";

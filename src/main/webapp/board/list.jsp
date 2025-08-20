@@ -14,7 +14,7 @@
 <div style="text-align: right; margin: 10px;">
     <c:choose>
         <c:when test="${not empty sessionScope.user}">
-            안녕하세요, ${sessionScope.userName}님!
+            안녕하세요, <a href="front?command=userinfo">${sessionScope.userName}</a>님!
             <a href="front?command=logout">로그아웃</a>
         </c:when>
         <c:otherwise>
