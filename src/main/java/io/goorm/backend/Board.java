@@ -12,6 +12,7 @@ public class Board {
   private String content;
   private String author;
   private Timestamp createdAt;
+  private int writerId;
 
   // 기본 생성자
   public Board() {
@@ -41,8 +42,11 @@ public class Board {
     return author;
   }
 
-  public Timestamp getCreatedAt() {
-    return createdAt;
+  public Timestamp getCreatedAt() { return createdAt; }
+
+
+  public int getWriterId() {
+    return writerId;
   }
 
   // Setter 메서드들
@@ -65,6 +69,8 @@ public class Board {
   public void setCreatedAt(Timestamp createdAt) {
     this.createdAt = createdAt;
   }
+
+  public void setWriterId(int writerId) { this.writerId = writerId; }
 
   // toString 메서드
   @Override

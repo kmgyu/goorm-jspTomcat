@@ -21,6 +21,7 @@ public class BoardDAO {
     board.setTitle(rs.getString("title"));
     board.setAuthor(rs.getString("author"));
     board.setContent(rs.getString("content"));
+    board.setWriterId(rs.getInt("writer_id"));
     board.setCreatedAt(rs.getTimestamp("created_at"));
     return board;
   };
@@ -40,8 +41,8 @@ public class BoardDAO {
   }
 
   public void insertBoard(Board board) {
-    String sql = "INSERT INTO board (title, author, content, created_at) VALUES (?, ?, ?, NOW())";
-    jdbcTemplate.update(sql, board.getTitle(), board.getAuthor(), board.getContent());
+    String sql = "INSERT INTO board (title, author, content, writer_id, created_at) VALUES (?, ?, ?, ?, NOW())";
+    jdbcTemplate.update(sql, board.getTitle(), board.getAuthor(), board.getContent(), board.getWriterId());
   }
 
   // BoardDAO 클래스에 추가할 메서드

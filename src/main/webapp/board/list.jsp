@@ -24,7 +24,10 @@
     </c:choose>
 </div>
 
-<a href="front?command=boardWrite">글쓰기</a>
+<!-- 글쓰기 버튼을 로그인한 사용자에게만 표시 -->
+<c:if test="${not empty sessionScope.user}">
+    <a href="front?command=boardWrite" class="write-btn">글쓰기</a>
+</c:if>
 
 <table border="1">
     <tr>
