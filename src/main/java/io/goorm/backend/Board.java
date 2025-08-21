@@ -1,6 +1,7 @@
 package io.goorm.backend;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 /**
  * Board Value Object
@@ -13,6 +14,7 @@ public class Board {
   private String author;
   private Timestamp createdAt;
   private int writerId;
+  private List<FileUpload> attachments;
 
   // 기본 생성자
   public Board() {
@@ -71,6 +73,23 @@ public class Board {
   }
 
   public void setWriterId(int writerId) { this.writerId = writerId; }
+
+
+  public List<FileUpload> getAttachments() {
+    return attachments;
+  }
+
+  public void setAttachments(List<FileUpload> attachments) {
+    this.attachments = attachments;
+  }
+
+  public void addAttachment(FileUpload fileUpload) {
+    this.attachments.add(fileUpload);
+  }
+
+  public void removeAttachment(FileUpload fileUpload) {
+    this.attachments.remove(fileUpload);
+  }
 
   // toString 메서드
   @Override
