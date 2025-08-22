@@ -290,7 +290,7 @@
             const info = document.createElement('div');
             info.innerHTML = `
                     <p class="text-sm font-medium text-gray-900">${file.name}</p>
-                    <p class="text-xs text-gray-500">${formatFileSize(file.size)}</p>
+                    <p class="text-xs text-gray-500">\${formatFileSize(file.size)}</p>
                 `;
 
             fileInfo.appendChild(icon);
